@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="https://dksindo.com/contoh-website/travel-umroh/style.scss">
+	<link rel="stylesheet" href="https://dksindo.com/contoh-website/travel-umroh/style.css">
 	
 </head>
 <body>
@@ -84,5 +84,42 @@
 		</article>
 	</main>
 	<script src="https://dksindo.com/contoh-website/travel-umroh/script.js"></script>
+	<script>
+        var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?43125';
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url;
+        var options = {
+            "enabled":true,
+            "chatButtonSetting":{
+                "backgroundColor":"#00e785",
+                "ctaText":"Hubungi kami !",
+                "borderRadius":"25",
+                "marginLeft": "0",
+                "marginRight": "20",
+                "marginBottom": "20",
+                "ctaIconWATI":false,
+                "position":"right"
+            },
+            "brandSetting":{
+                "brandName":"Askhiya Tour n Travel",
+                "brandSubTitle":"undefined",
+                "brandImg":"https://dksindo.com/contoh-website/travel-umroh/image/WhatsApp Image 2023-12-29 at 22.02.58.jpeg",
+                "welcomeText":"Halo kaka, ada yang bisa kami bantu ?",
+                "messageText":"Halo kaka, ada yang bisa kami bantu ? {{page_link}} {{page_title}}",
+                "backgroundColor":"#00e785",
+                "ctaText":"Hubungi kami !",
+                "borderRadius":"25",
+                "autoShow":false,
+                "phoneNumber":"6282127061218"
+            }
+        };
+        s.onload = function() {
+            CreateWhatsappChatWidget(options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    </script>
 </body>
 </html>
